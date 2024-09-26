@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        body{
+            background-image: url(../img/5.jpg);
+            background-size:  100%;
+            background-position: center;
+            
+        }
+        .menu{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(127, 127, 231);
+            margin: 100px auto;
+            >ul{
+                list-style-type: none;
+                /* border: 2px solid yellow; */
+                height: 100%;
+                >li{
+                    /* border: 2px solid red; */
+                    height: 60px;
+                    display: flex;
+                    position: relative;
+                    &:hover:nth-last-of-type(2)+li{
+                        height: auto;
+                    }
+                    >a{
+                        width: 100%;
+                        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                        color: white;
+                        font-size: 20px;
+                        text-decoration: none;
+                        padding-left: 6px;
+                        text-transform: capitalize;
+                        display: flex;
+                        align-items: center;
+                        &:hover{
+                            background-color: rgba(60, 60, 156, 0.589);
+                        }
+                    }
+                    &:hover>ul{
+                        height: 120px;
+                        z-index: 1;
+                    }
+                    >ul{
+                        position: absolute;
+                        left: 0;top: 60px;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 0;
+                        transition: .7s;
+                        background-color: rgb(68, 67, 67);
+                        >li{
+                            list-style-type: none;
+                            width: 100%;
+                            height: 30px;
+                            /* border: 1px solid red; */
+                            display: flex;
+                            >a{
+                                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                                font-size: 18px;
+                                color: white;
+                                text-decoration: none;
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                padding-left: 5px;
+                                &:hover{
+                                    background-color: rgba(19, 18, 18, 0.438);
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+                
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="">👤profile</a></li>
+            <li><a href="">📩message</a></li>
+            <li><a href="">🔧setting</a>
+                <ul>
+                    <li><a href="">account</a></li>
+                    <li><a href="">secruity & privacy</a></li>
+                    <li><a href="">passwoard</a></li>
+                    <li><a href="">notification</a></li>
+                </ul>
+            </li>
+            <li><a href="">❔help</a>
+                <ul>
+                    <li><a href="">FAQ's</a></li>
+                    <li><a href="">submit a ticket</a></li>
+                    <li><a href="">network status</a></li>
+                </ul>
+            </li>
+            <li><a href="">➡ logout</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
